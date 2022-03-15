@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Criptografando textos</title>
+</head>
+
+<body>
+    <header>
+        <h1 class="titulo">Criptografia Aplicada</h1>
+    </header>
+    <main>
+        <div class="container">
+            <section class="criptografar">
+                <label for="cripto"></label>
+                <textarea placeholder="Digite o texto para ser criptografado" name="cripto" id="cripto" cols="50"
+                    rows="15"></textarea>
+                <button id="criptografar">CRIPTOGRAFAR</button>
+            </section>
+            <section class="resultado">
+                <label for="text-result"></label>
+                <textarea class="result" placeholder="Texto Criptografado" name="text-result" id="text-result" cols="50"
+                    rows="15"></textarea>
+                <button id="copiar">COPIAR</button>
+            </section>
+            <section class="descriptografar">
+                <label for="text-descripto"></label>
+                <textarea placeholder="Cole aqui o texto criptografado para descritografar" name="descripto"
+                    id="descripto" cols="50" rows="15"></textarea>
+                <button id="descriptografar">DESCRIPTOGRAFAR</button>
+            </section>
+        </div>
+        <section class="regras">
+            <h2 class="titulo-regra">Regras</h2>
+            <lu>
+                <li>Apenas com letras minúsculas</li>
+                <li>Não devem ser utilizados letras com acentos nem caracteres especiais</li>
+            </lu>
+        </section>
+    </main>
+    <footer>
+        <p>
+            Feito por Igor Barbosa Rocha - &copy;Direitos reservados
+        </p>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
