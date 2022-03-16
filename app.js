@@ -37,8 +37,7 @@ buttonCript.addEventListener('click', () => {
 
 
 buttonCopiar.addEventListener('click', () => {
-    textoCriptografado.select()
-    document.execCommand('copy')
+    navigator.clipboard.writeText(textoCriptografado.value)
     textoCriptografado.value = ''
 })
 
