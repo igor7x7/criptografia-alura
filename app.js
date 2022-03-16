@@ -1,64 +1,58 @@
 const cripto = document.getElementById('cripto')
 const buttonCript = document.getElementById('criptografar')
+const textoCriptografado = document.getElementById('text-result')
+const buttonCopiar = document.getElementById('copiar')
+const buttonDescript = document.getElementById('descriptografar')
+const descripto = document.getElementById('descripto')
+
 
 buttonCript.addEventListener('click', () => {
     const texto = cripto.value
-    console.log(texto[5])
-    texto.forEach(function substituir() {
-        if (texto[i] == 'e') {
-            texto[i] = 'enter'
+    let cript = texto.split('')
+
+    for (let i = 0; i <= texto.length; i++) {
+        if (cript[i] == 'a') {
+            cript[i] = 'atr'
         }
-        if (texto[i] == 'i') {
-            texto[i] = 'imes'
+        if (cript[i] == 'e') {
+            cript[i] = 'eqb'
         }
-        if (texto[i] == 'a') {
-            texto[i] = 'ai'
+        if (cript[i] == 'i') {
+            cript[i] = 'ihr'
         }
-        if (texto[i] == 'o') {
-            texto[i] = 'ober'
+        if (cript[i] == 'o') {
+            cript[i] = 'opbr'
         }
-        if (texto[i] == 'u') {
-            texto[i] = 'ufat'
+        if (cript[i] == 'u') {
+            cript[i] = 'udyt'
         }
-    })
+    }
+
+    let textoCript = cript.toString()
+    let reform = textoCript.replace(/,/g, "")
+
+    textoCriptografado.value = reform
     cripto.value = ''
-    console.log(texto)
 })
 
 
+buttonCopiar.addEventListener('click', () => {
+    textoCriptografado.select()
+    document.execCommand('copy')
+    textoCriptografado.value = ''
+})
 
-let texto = cripto.innerText
+buttonDescript.addEventListener('click', () => {
+    const texto = descripto.value
 
-console.log(texto)
+    let part1 = texto.replaceAll('atr', 'a')
+    let part2 = part1.replaceAll('eqb', 'e')
+    let part3 = part2.replaceAll('ihr', 'i')
+    let part4 = part3.replaceAll('opbr', 'o')
+    let part5 = part4.replaceAll('udyt', 'u')
 
-/*
-*********modelo para testar**********
+    descripto.value = part5
 
-const texto = "eu estou com saudades"
-let cript = texto.split('')
-let i = 0
+})
 
-for(let i = 0; i<= texto.length; i++){
-  if(cript[i] == 'a'){
-    cript[i] = 'atr'
-  }
-  if(cript[i] == 'e'){
-    cript[i] = 'eqb'
-  }
-  if(cript[i] == 'i'){
-    cript[i] = 'ihr'
-  }
-  if(cript[i] == 'o'){
-    cript[i] = 'opbr'
-  }
-  if(cript[i] == 'u'){
-    cript[i] = 'udyt'
-  }
-}
 
-let textoCript = cript.toString()
-let reform = textoCript.replace(/,/g,"")
-
-console.log(cript)
-console.log(textoCript)
-console.log(reform) */
