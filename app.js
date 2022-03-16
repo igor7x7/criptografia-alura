@@ -12,19 +12,19 @@ buttonCript.addEventListener('click', () => {
 
     for (let i = 0; i <= texto.length; i++) {
         if (cript[i] == 'a') {
-            cript[i] = 'atr'
+            cript[i] = 'ai'
         }
         if (cript[i] == 'e') {
-            cript[i] = 'eqb'
+            cript[i] = 'enter'
         }
         if (cript[i] == 'i') {
-            cript[i] = 'ihr'
+            cript[i] = 'imes'
         }
         if (cript[i] == 'o') {
-            cript[i] = 'opbr'
+            cript[i] = 'ober'
         }
         if (cript[i] == 'u') {
-            cript[i] = 'udyt'
+            cript[i] = 'ufat'
         }
     }
 
@@ -44,11 +44,11 @@ buttonCopiar.addEventListener('click', () => {
 buttonDescript.addEventListener('click', () => {
     const texto = descripto.value
 
-    let part1 = texto.replaceAll('atr', 'a')
-    let part2 = part1.replaceAll('eqb', 'e')
-    let part3 = part2.replaceAll('ihr', 'i')
-    let part4 = part3.replaceAll('opbr', 'o')
-    let part5 = part4.replaceAll('udyt', 'u')
+    let part1 = texto.replaceAll('ai', 'a')
+    let part2 = part1.replaceAll('enter', 'e')
+    let part3 = part2.replaceAll('imes', 'i')
+    let part4 = part3.replaceAll('ober', 'o')
+    let part5 = part4.replaceAll('ufat', 'u')
 
     descripto.value = part5
 
